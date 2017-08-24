@@ -1,0 +1,14 @@
+baseURL = "https://blog.haramishio.xyz/"
+languageCode = "ja"
+title = "ハラミTech"
+
+[Params]
+subtitle = "ぎじゅつ9割 にく1割"
+twitter = "https://twitter.com/morix1500"
+github = "https://github.com/morix1500"
+qiita = "http://qiita.com/haramishio"
+showsRSS = true
+copyright = "Written by Shota Omori(Morix)"
+profile = "/profile.jpg"
+shareThis = true
+analytics = "UA-73777852-1"
