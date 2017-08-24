@@ -1,0 +1,32 @@
+language: bash
+sudo: false
+
+addons:
+  apt:
+    packages:
+      - python-pip
+      - python-setuptools
+
+before_install:
+  - pip install awscli
+
+before_script:
+  - bash ./script/git.sh
+
+script:
+  - bash ./script/build.sh
+
+deploy:
+  provider: s3
+  endpoint: s3-ap-northeast-1.amazonaws.com
+  bucket: blog.haramishio.xyz
+  region: ap-northeast-1
+  on:
+    branches: master
+
+after_script:
+  - bash ./script/invalidation.sh
+
+env:
+  global:
+    secure: "s4K2zd6JRE9HypCTdutjrQVmmJgTRz/CC0umd/V6SMEgMaWKIV6ldxfght0NxAK//42WG8f7NylQi4R5RcVxxHgSXmOUMS0AM7NRQFctUjJf1Rdo5eUCAq7v5JzZz5vU7VLKcapVK27SRfN4HF00FBp6oK08JzYR7eWzklhrun4zhug0+L55qj7JGykuC4usbiUkbtgL9rPolPnTB/V5E7uEUEE+eFJi/EisCG8KBm8P3/WIU7J4Sk8TBBRv2LBi+TMEp87PvF1+lAgLse8EGzs30pfP93MeTnNBi5YWbmVpXTB3uDh7wZn9tjR2h1ipCZFwwJchSqhO0ATP+7M7meEAPssHnoMnjBI9lyPWeBMCPtVXKabGnopCX/8Mc7ICJEq5rqHaSFyTFUlVZ+tOnLa4uUseA+KY6zqKCoEoXFZV+1KuBgZAZPStGCmQoAB4stlS26bWyR+q3nQxtSfo6+h4Xtb4hdqQjxyUEOZ9MkXZP1utkQeMfKPQbXzH2pQZRVRxc27hweGmBlSxi2ZH9putGNeQMUj+y6JUvrB0S0skbz6esYCrHJMQ9VQ+QM2zaXztQo6Qf/I3hHhfCl57WbZSSp1QxvmfnQSbj5DXGZcwHa18hJPB0+Az10GuaJAOoRHvULRr8aqLX8UkVXq2GgwL31GtgBAjqoIq8npgdWc="
