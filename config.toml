@@ -4,6 +4,7 @@ title = "ハラミTech"
 
 [Params]
 subtitle = "ぎじゅつ9割 にく1割"
+description = "Webやサーバーの技術についての調査やアプリ作成についてのブログを発信しています。"
 twitter = "https://twitter.com/morix1500"
 github = "https://github.com/morix1500"
 qiita = "http://qiita.com/Morix1500"
@@ -12,3 +13,4 @@ copyright = "Written by Shota Omori(Morix)"
 profile = "/profile.jpg"
 shareThis = true
 analytics = "UA-73777852-1"
+hasCJKLanguage = true

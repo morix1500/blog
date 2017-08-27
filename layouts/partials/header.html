@@ -15,6 +15,16 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta name="viewport" content="width=device-width,user-scalable=no,maximum-scale=1,initial-scale=1">
 
+  <!-- OGP
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="og:title" content="{{ .Title }}" />
+  <meta name="og:description" content="{{ if .IsPage }}{{ .Summary }}{{ else }}{{ .Site.Params.description }}{{ end }}" />
+  <meta name="og:image" content="{{ .Site.BaseURL }}{{ .Params.eyecatch }}" />
+  <meta name="twitter:url" content="{{ .Permalink }}" />
+  <meta name="twitter:site" content="@morix1500" />
+  <meta name="twitter:creator" content="@morix1500" /> 
+
   <!-- HTTPS Canonical URL
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="canonical" href="{{ .Permalink }}"/>
