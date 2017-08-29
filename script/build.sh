@@ -5,7 +5,7 @@ set -ex
 hugo_dir=./hugo
 hugo_bin=${hugo_dir}/hugo
 
-theme_name=angels-ladder
+theme_name=Mainroad
 
 public_dir=./public
 

@@ -1,16 +1,33 @@
-baseURL = "https://blog.haramishio.xyz/"
+baseurl = "https://blog.haramishio.xyz/"
 languageCode = "ja"
 title = "ハラミTech"
+googleAnalytics = "UA-73777852-1"
+
+[[menu.main]]
+    name = "post"
+    url = "/post"
+    
+[[menu.main]]
+    name = "contact"
+    url = "mailto:rade1500@gmail.com"
+
+[Author]
+    name = "Morix"
+    bio = "インフラエンジニアです。でもいろんな分野に興味がある！"
+    avatar = "/profile.jpg"
 
 [Params]
-subtitle = "ぎじゅつ9割 にく1割"
-description = "Webやサーバーの技術についての調査やアプリ作成についてのブログを発信しています。"
-twitter = "https://twitter.com/morix1500"
-github = "https://github.com/morix1500"
-qiita = "http://qiita.com/Morix1500"
-showsRSS = true
-copyright = "Written by Shota Omori(Morix)"
-profile = "/profile.jpg"
-shareThis = true
-analytics = "UA-73777852-1"
-hasCJKLanguage = true
+    subtitle = "ぎじゅつ9割 にく1割"
+    description = "Webやサーバーの技術についての調査やアプリ作成についてのブログを発信しています。"
+    hasCJKLanguage = true
+    authorbox = true
+    post_navigation = true
+
+[Params.widgets]
+    recent_articles = true
+    recent_articles_num = 10
+    tags = true
+
+    social_twitter = "morix1500"
+    social_github = "morix1500"
+    social_qiita = "Morix1500"
