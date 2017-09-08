@@ -1,25 +1,15 @@
 language: bash
 sudo: false
 
-addons:
-  apt:
-    packages:
-      - python-pip
-      - python-setuptools
-
-before_install:
-  - pip install awscli
-
 before_script:
   - bash ./script/git.sh
 
 script:
   - bash ./script/build.sh
-  - bash ./script/deploy.sh
 
-after_script:
-  - bash ./script/invalidation.sh
+deploy:
+  provider: firebase
 
 env:
   global:
-    secure: "s4K2zd6JRE9HypCTdutjrQVmmJgTRz/CC0umd/V6SMEgMaWKIV6ldxfght0NxAK//42WG8f7NylQi4R5RcVxxHgSXmOUMS0AM7NRQFctUjJf1Rdo5eUCAq7v5JzZz5vU7VLKcapVK27SRfN4HF00FBp6oK08JzYR7eWzklhrun4zhug0+L55qj7JGykuC4usbiUkbtgL9rPolPnTB/V5E7uEUEE+eFJi/EisCG8KBm8P3/WIU7J4Sk8TBBRv2LBi+TMEp87PvF1+lAgLse8EGzs30pfP93MeTnNBi5YWbmVpXTB3uDh7wZn9tjR2h1ipCZFwwJchSqhO0ATP+7M7meEAPssHnoMnjBI9lyPWeBMCPtVXKabGnopCX/8Mc7ICJEq5rqHaSFyTFUlVZ+tOnLa4uUseA+KY6zqKCoEoXFZV+1KuBgZAZPStGCmQoAB4stlS26bWyR+q3nQxtSfo6+h4Xtb4hdqQjxyUEOZ9MkXZP1utkQeMfKPQbXzH2pQZRVRxc27hweGmBlSxi2ZH9putGNeQMUj+y6JUvrB0S0skbz6esYCrHJMQ9VQ+QM2zaXztQo6Qf/I3hHhfCl57WbZSSp1QxvmfnQSbj5DXGZcwHa18hJPB0+Az10GuaJAOoRHvULRr8aqLX8UkVXq2GgwL31GtgBAjqoIq8npgdWc="
+  - secure: GS+2po+or+ryTmwRicW7vlcr0zX7ySDRUXIDbfxpcrtQpQr7EU7RAZU/tKX/1d/BJgmf7s0OJyJudrywHGs15U/qV/wDm43Il2kOXAi51smpleCcHJFPBPwxEUuRVabHdyZRo1WNJbAARoLm+wGYxBNlfLEvi9hSR1uLxDx5irAT1YNDxwAahnWqOUCtk5RR1xZSO94kS0c2BiTd1FG2EKcimqZdzebtg7ugFCKiyy3wVU62InjI8wlDMNZeFzYt15eh5SKXKTbD5fDP3jviE/IsoqPQQqccWk8euqepTA4b6Er3YkftfPw7Fb1GChwqZV7KsVUUMpzE++Eih46Z3rEr5UBDIg3Lvo15HjqAh/cfgkMlTakavLyXzJU4sLuYZyfEmUo5J/lJc98EQAypqmqON3Apy1QH66IhvDPBZ88/CY081MC+7Tr1INQRo+Uku1FKBbM/Sf0AWPTeXJHZkipVzmZ7I7cF2EJYwfDNKAqS6Uz4ZXvZVb7NRMLcn6IoJ4NGPDaFucF9FCVzyPvPRnK38D+sBYJdLweJ1/uem62KTkQOJcayQpwFciWPOFpymRNyZ44A/p3MnnXkJo2ZKV+VVun8EuDEMpIai9de0Lgl49490WbHepXcF5YNUieGmZ7lwH2ALKLi413s9gTO97ZyPgW9lEtkap5Cf7RAyf4=
