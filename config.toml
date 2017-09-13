@@ -2,14 +2,15 @@ baseurl = "https://blog.haramishio.xyz/"
 languageCode = "ja"
 title = "ハラミTech"
 googleAnalytics = "UA-73777852-1"
+DisqusShortname = "haramitech"
 
 [[menu.main]]
     name = "post"
     url = "/post"
     
 [[menu.main]]
-    name = "contact"
-    url = "mailto:rade1500@gmail.com"
+    name = "rss"
+    url = "/index.xml"
 
 [Author]
     name = "Morix"
