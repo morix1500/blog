@@ -1,34 +1,68 @@
-baseurl = "https://blog.haramishio.xyz/"
-languageCode = "ja"
+baseURL = "https://blog.haramishio.xyz/"
 title = "ハラミTech"
+# for smart copyright line, leave this blank and check [params.copyright]
+copyright = ""
+
+theme = "minimo"
+
 googleAnalytics = "UA-73777852-1"
 DisqusShortname = "haramitech"
 
+Paginate = 10
+preserveTaxonomyNames = true
+
+enableRobotsTXT = true # generate robots.txt
+
+hasCJKLanguage = true
+
+# Syntax Highlighting ( https://gohugo.io/content-management/syntax-highlighting/ )
+#pygmentsCodefences = true
+
+# Missing translations will default to this content language
+defaultContentLanguage = "ja"
+
+[params.info]
+description = "Webやサーバーの技術についての調査やアプリ作成についてのブログを発信しています。"
+title404 = "Nothing's here!"
+
+[params.assets]
+favicon = "favicon.ico"
+gopher = "" # used in 404 template ( Generator: https://gopherize.me )
+
+[params.copyright]
+prefix = ""
+holder = "Shota Omori(Morix)"
+startYear = "2017"
+suffix = ""
+
+[params.settings]
+# date & time format: https://golang.org/pkg/time/
+dateFormat = "2006-01-02"
+listDateFormat = "2006-01-02"
+showReadingTime = false
+
+[params.seo]
+# Title Separator: - – — · • * ⋆ | ~ « » < >
+titleSeparator = "|"
+
+[params.social]
+email = "rade1500@gmail.com"
+facebook = "shota.morix"
+github = "morix1500"
+twitter = "morix1500"
+
+[params.social.config]
+platforms = ["github","facebook","twitter","email"]
+
+[permalinks]
+page = "/:slug/"
+
 [[menu.main]]
-    name = "post"
-    url = "/post"
+    name = "top"
+    url = "/"
+    weight = 1
     
 [[menu.main]]
     name = "rss"
     url = "/index.xml"
-
-[Author]
-    name = "Morix"
-    bio = "インフラエンジニアです。でもいろんな分野に興味がある！"
-    avatar = "/profile.jpg"
-
-[Params]
-    subtitle = "ぎじゅつ9割 にく1割"
-    description = "Webやサーバーの技術についての調査やアプリ作成についてのブログを発信しています。"
-    hasCJKLanguage = true
-    authorbox = true
-    post_navigation = true
-
-[Params.widgets]
-    recent_articles = true
-    recent_articles_num = 10
-    tags = true
-
-    social_twitter = "morix1500"
-    social_github = "morix1500"
-    social_qiita = "Morix1500"
+    weight = 4
