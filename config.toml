@@ -6,7 +6,6 @@ copyright = ""
 theme = "minimo"
 
 googleAnalytics = "UA-73777852-1"
-DisqusShortname = "haramitech"
 
 Paginate = 10
 preserveTaxonomyNames = true
