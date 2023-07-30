@@ -1,0 +1,34 @@
+baseURL: https://blog.haramishio.xyz
+languageCode: ja
+theme: smigle
+title: /dev/nullnull
+menu:
+  main:
+    - identifier: home
+      name: Home
+      url: /
+      weight: 1
+    - identifier: about
+      name: About this blog
+      url: /posts/about-this-blog/
+      weight: 2
+    - identifier: posts
+      name: Posts
+      url: /posts/
+      weight: 3
+params:
+  abbrDateFmt: "2006-01-02"
+  author: "Morix"
+  brandIconFile: "images/logo.png"
+  dateFmt: "2006-01-02"
+  customStylesheets:
+    - css/notosansjp.css
+  #readingSpeed: 600 # Use to set custom reading speed
+  #readingSpeedMin: 25 # Use to set custom reading speed range
+  #readingSpeedMax: 175 # Use to set custom reading speed range
+  social:
+    - name: GitHub
+      url: https://github.com/morix1500
+    - name: Twitter
+      url: https://twitter.com/morix1500
+  subtitle: "からあげ大好き"

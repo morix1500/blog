@@ -1,9 +1,6 @@
 ---
-title: "{{ replace .TranslationBaseName "-" " " | title }}"
+title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
-slug: ""
-tags: ["", ""]
-draft: false
-eyecatch: "profile.jpg"
+draft: true
 ---
 
